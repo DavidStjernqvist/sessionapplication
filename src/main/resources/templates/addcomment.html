@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add comment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form action="#" th:action="@{/addComment}" th:object="${comment}" method="post">
+        <input type="hidden" th:field="*{notice}"/>
+        <input type="hidden" th:field="*{user}"/>
+        <label for="">Comment: </label>
+        <br>
+        <input type="text" th:field="*{text}" placeholder="comment...">
+        <br><br>
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>

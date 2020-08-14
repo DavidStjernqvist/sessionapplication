@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form action="#" th:action="@{/notice/edit}" th:object="${notice}" method="post">
+        <input type="hidden" th:field="*{user}">
+        <input type="hidden" th:field="*{id}">
+
+        <label for="">Title: </label>
+        <br>
+        <input type="text" th:field="*{title}">
+        <br><br>
+        <label for="">Text: </label>
+        <br>
+        <input type="text" th:field="*{text}">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

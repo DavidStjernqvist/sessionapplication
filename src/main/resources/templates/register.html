@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="container">
+        <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+            <label for="">Full name: </label>
+            <br>
+            <input type="text" th:field="*{name}" placeholder="Full name...">
+            <br><br>
+            <label for="">Username: </label>
+            <br>
+            <input type="text" th:field="*{username}" placeholder="Username...">
+            <br><br>
+            <label for="">Password: </label>
+            <br>
+            <input type="password" th:field="*{password}" placeholder="Password...">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+</body>
+</html>
